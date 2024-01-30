@@ -3,9 +3,8 @@ Bob[] bobs;
 int bobCount = 200;
 void setup() {
   bobs = new Bob[bobCount];
-  for (int a = 0; a < bobCount; a++) {
+  for (int a = 0; a < bobCount; a++)
     bobs[a] = new Bob(color(random(255), random(255), random(255), 125));
-  }
   frameRate(60);
   fullScreen();
 }
@@ -23,5 +22,5 @@ void mousePressed() {
   }
 }
 PVector getRandomPoint() {
-  return new PVector(random(bobSize, width - bobSize), random(bobSize, height - bobSize));
+  return new PVector(random(width), random(height));
 }
